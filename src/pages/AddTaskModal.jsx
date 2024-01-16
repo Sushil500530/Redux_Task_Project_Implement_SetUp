@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import { useForm } from "react-hook-form";
+import Modal from "../components/ui/Modal";
 
 const AddTaskModal = ({isOpen,setIsOpen}) => {
     const { register, handleSubmit, reset } = useForm();
@@ -17,7 +18,7 @@ const AddTaskModal = ({isOpen,setIsOpen}) => {
     }
     return (
         <div>
-            {/* <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Your Task" > */}
+            <Modal isOpen={isOpen} setIsOpen={setIsOpen} title="Add Your Task" >
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <div className="space-y-3">
                         <div className="flex flex-col gap-3">
@@ -52,7 +53,7 @@ const AddTaskModal = ({isOpen,setIsOpen}) => {
                     </div>
                 </form>
 
-            {/* </Modal> */}
+            </Modal>
 
         </div>
     );

@@ -5,7 +5,7 @@ import {
     UserCircleIcon,
   } from '@heroicons/react/24/solid';
   
-  import logo from '../assets/image/logo.png';
+  import logo from '../../assets/image/logo.png';
   import { NavLink } from 'react-router-dom';
   
 const Sidebar = () => {
