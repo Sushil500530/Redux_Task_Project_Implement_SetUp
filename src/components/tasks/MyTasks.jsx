@@ -1,18 +1,19 @@
 import { CheckIcon, DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
+import { useSelector } from "react-redux";
 
 const MyTasks = () => {
-     // const { tasks } = useSelector((state) => state.taskSlice)
-     const tasks = [{
-        id: 1,
-        status: 'pending',
-        title: 'Remove Button',
-        description:
-          'We need a remove button in our task card. Meke the button red and use Heroicon for tashbin icon.',
-        date: '2023-08-28',
-        assignedTo: 'Mir Hussain',
-        priority: 'high',
-      }];
-      console.log(tasks);
+     const { tasks } = useSelector((state) => state.taskSlice)
+    //  const tasks = [{
+    //     id: 1,
+    //     status: 'pending',
+    //     title: 'Remove Button',
+    //     description:
+    //       'We need a remove button in our task card. Meke the button red and use Heroicon for tashbin icon.',
+    //     date: '2023-08-28',
+    //     assignedTo: 'Mir Hussain',
+    //     priority: 'high',
+    //   }];
+    //   console.log(tasks);
     return (
         <div>
             <h1 className="text-xl my-3">My Tasks</h1>

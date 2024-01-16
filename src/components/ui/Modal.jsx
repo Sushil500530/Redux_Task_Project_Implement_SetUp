@@ -1,11 +1,9 @@
-/* eslint-disable no-undef */
-
+/* eslint-disable react/prop-types */
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 
-const Modal = () => {
-    // eslint-disable-next-line no-unused-vars
-    function closeModal({ isOpen, setIsOpen, title, children }) {
+const Modal = ({ isOpen, setIsOpen, title, children }) => {
+    function closeModal() {
         setIsOpen(false)
     }
     return (
