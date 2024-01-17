@@ -1,8 +1,19 @@
 import { CheckIcon, DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
-import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { userTasks } from "./taskSlice";
 
 const MyTasks = () => {
-     const { tasks } = useSelector((state) => state.taskSlice)
+     const {tasks, userSpecificTasks } = useSelector((state) => state.taskSlice);
+     const {name:userName} = useSelector((state)=> state.userSlice);
+     const dispatch = useDispatch();
+     
+    //  console.log(tasks);
+     console.log(userSpecificTasks);
+
+     useEffect(()=> {
+        dispatch(userTasks(userName))
+     },[userName,dispatch,tasks ])
     //  const tasks = [{
     //     id: 1,
     //     status: 'pending',
@@ -18,7 +29,7 @@ const MyTasks = () => {
         <div>
             <h1 className="text-xl my-3">My Tasks</h1>
             <div className=" h-[750px] overflow-auto space-y-3">
-                {tasks?.map(item => <div
+                {userSpecificTasks?.map(item => <div
                     key={item.id}
                     className="bg-secondary/10 rounded-md p-3 flex justify-between"
                 >

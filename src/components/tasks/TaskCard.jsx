@@ -6,7 +6,7 @@ import { removeTask, updateTask } from "./taskSlice";
 
 const TaskCard = ({task}) => {
     const dispatch = useDispatch();
-    console.log(task);
+    // console.log(task);
     let updatedStatus;
     if(task.status === 'pending'){
       updatedStatus = 'running';
