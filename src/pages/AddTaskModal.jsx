@@ -3,7 +3,7 @@
 import { useForm } from "react-hook-form";
 import Modal from "../components/ui/Modal";
 import { useDispatch } from "react-redux";
-import { addTask } from "../components/tasks/taskSlice";
+import { addTask, updateTask } from "../components/tasks/taskSlice";
 
 const AddTaskModal = ({isOpen,setIsOpen}) => {
     const { register, handleSubmit, reset } = useForm();
@@ -37,7 +37,7 @@ const AddTaskModal = ({isOpen,setIsOpen}) => {
                         </div>
                         <div className="flex flex-col gap-3">
                             <label className="text-xl font-bold" htmlFor="title">Assign to*</label>
-                            <input type="text" name="name" {...register('name')} className="w-full rounded-md" required />
+                            <input type="text" name="assignedTo" {...register('assignedTo')} className="w-full rounded-md" required />
                         </div>
                         <div className="flex flex-col gap-3">
                             <label className="text-xl font-bold" htmlFor="priority">Priority*</label>
