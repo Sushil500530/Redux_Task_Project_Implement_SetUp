@@ -2,7 +2,7 @@ import { BellIcon, MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import MyTasks from "../components/tasks/MyTasks";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import AddTaskModal from "./AddTaskModal";
+import AddTaskModal from "../components/tasks/AddTaskModal";
 import TaskCard from "../components/tasks/TaskCard";
 
 const Tasks = () => {

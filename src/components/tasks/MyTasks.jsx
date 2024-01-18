@@ -1,7 +1,7 @@
 import { CheckIcon, DocumentMagnifyingGlassIcon } from "@heroicons/react/24/solid";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateTask, userTasks } from "./taskSlice";
+import { updateTask, userTasks } from "../../redux/features/task/taskSlice";
 import TasksDetailsModal from "./TasksDetailsModal";
 
 const MyTasks = () => {

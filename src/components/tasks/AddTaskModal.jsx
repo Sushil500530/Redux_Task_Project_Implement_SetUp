@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
 import { useForm } from "react-hook-form";
-import Modal from "../components/ui/Modal";
+import Modal from "../ui/Modal";
 import { useDispatch } from "react-redux";
-import { addTask, updateTask } from "../components/tasks/taskSlice";
+import { addTask, updateTask } from "../../redux/features/task/taskSlice";
 
 const AddTaskModal = ({isOpen,setIsOpen}) => {
     const { register, handleSubmit, reset } = useForm();

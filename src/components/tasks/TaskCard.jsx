@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 import { ArrowRightIcon, TrashIcon } from "@heroicons/react/24/solid";
 import { useDispatch } from "react-redux";
-import { removeTask, updateTask } from "./taskSlice";
+import { removeTask, updateTask } from "../../redux/features/task/taskSlice";
 
 const TaskCard = ({task}) => {
     const dispatch = useDispatch();
